@@ -1,5 +1,5 @@
 {% set name = "pyproject-parser" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyproject-parser-{{ version }}.tar.gz
-  sha256: 63fb38ea8b7b3d7922e69872af9fc11e604bad7bdb4435dc7fc8366fae3ed457
+  sha256: e4194ad8315b55a948bf62e48d42f0951a24ab6fad7b0bc9cb79b347ad5c2cbe
 
 build:
   entry_points:
     - pyproject-parser=pyproject_parser.__main__:main
-    - check-pyproject=pyproject_parser.__main__:main
-    - pyproject-fmt=pyproject_parser.__main__:main
+    - check-pyproject=pyproject_parser.__main__:check
+    - pyproject-fmt=pyproject_parser.__main__:reformat
+    - pyproject-info=pyproject_parser.__main__:info
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -35,6 +36,8 @@ requirements:
     - shippinglabel >=1.0.0
     - toml >=0.10.2
     - typing-extensions >=3.7.4.3
+  run_constrained:
+    - sdjson >=0.3.1
 
 test:
   imports:
