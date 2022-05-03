@@ -12,8 +12,9 @@ source:
 build:
   entry_points:
     - pyproject-parser=pyproject_parser.__main__:main
-    - check-pyproject=pyproject_parser.__main__:main
-    - pyproject-fmt=pyproject_parser.__main__:main
+    - check-pyproject=pyproject_parser.__main__:check
+    - pyproject-fmt=pyproject_parser.__main__:reformat
+    - pyproject-info=pyproject_parser.__main__:info
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -35,6 +36,8 @@ requirements:
     - shippinglabel >=1.0.0
     - toml >=0.10.2
     - typing-extensions >=3.7.4.3
+  run_constrained:
+    - sdjson >=0.3.1
 
 test:
   imports:
