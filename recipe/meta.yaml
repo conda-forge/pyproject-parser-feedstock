@@ -27,7 +27,7 @@ requirements:
     - apeye >=1.0.0
     - attrs >=20.3.0
     - click >=7.1.2
-    - consolekit >=1.2.0
+    - consolekit >=1.4.1
     - dom-toml >=0.4.0
     - domdf-python-tools >=2.8.0
     - natsort >=7.1.1
