@@ -1,5 +1,5 @@
 {% set name = "pyproject-parser" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyproject-parser-{{ version }}.tar.gz
-  sha256: 204e470cdb5ebe9309d41b45801799897a7bdf8f2a4fa3d12bb68906ea71148e
+  sha256: db4e87fe613692ad495a39e86bd526f4cefd172583e9deb616064941d8894cfc
 
 build:
   entry_points:
