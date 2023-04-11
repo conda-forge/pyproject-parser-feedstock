@@ -1,11 +1,11 @@
-About pyproject-parser
-======================
+About pyproject-parser-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyproject-parser-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/repo-helper/pyproject-parser
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyproject-parser-feedstock/blob/main/LICENSE.txt)
 
 Summary: Parser for 'pyproject.toml'
 
