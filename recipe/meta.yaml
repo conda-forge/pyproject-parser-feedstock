@@ -28,13 +28,12 @@ requirements:
     - attrs >=20.3.0
     - click >=7.1.2
     - consolekit >=1.4.1
-    - dom-toml >=0.4.0
+    - dom-toml >=2.0.0
     - domdf-python-tools >=2.8.0
     - natsort >=7.1.1
     - packaging >=20.9
     - python >=3.6
     - shippinglabel >=1.0.0
-    - toml >=0.10.2
     - typing-extensions >=3.7.4.3
   run_constrained:
     - sdjson >=0.3.1
