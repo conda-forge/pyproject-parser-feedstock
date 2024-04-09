@@ -1,5 +1,5 @@
 {% set name = "pyproject-parser" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyproject-parser-{{ version }}.tar.gz
-  sha256: d6d06ddd9be96123c593b5c1d9a36578285571637645f4cf11c822648d0ecf37
+  sha256: 2b3a73e99f1ad6c6416e8777f4a34e98986899191880f32f481a024d5c9fb43b
 
 build:
   entry_points:
@@ -28,13 +28,12 @@ requirements:
     - attrs >=20.3.0
     - click >=7.1.2
     - consolekit >=1.4.1
-    - dom-toml >=0.4.0
+    - dom-toml >=2.0.0
     - domdf-python-tools >=2.8.0
     - natsort >=7.1.1
     - packaging >=20.9
     - python >=3.6
     - shippinglabel >=1.0.0
-    - toml >=0.10.2
     - typing-extensions >=3.7.4.3
   run_constrained:
     - sdjson >=0.3.1
