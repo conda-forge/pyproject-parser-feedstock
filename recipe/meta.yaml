@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyproject-parser-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyproject-parser-{{ version }}.tar.gz
   sha256: d1e8edbba3a5480eb0ff3ffe8f6943ba2905199878aff1cb05984900a6618201
 
 build:
@@ -17,12 +17,12 @@ build:
     - pyproject-info=pyproject_parser.__main__:info
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - apeye-core >=1.0.0
     - attrs >=20.3.0
@@ -32,7 +32,7 @@ requirements:
     - domdf-python-tools >=2.8.0
     - natsort >=7.1.1
     - packaging >=20.9
-    - python >=3.6
+    - python >={{ python_min }}
     - shippinglabel >=1.0.0
     - typing-extensions >=3.7.4.3
   run_constrained:
@@ -48,6 +48,7 @@ test:
     - pyproject-fmt --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/repo-helper/pyproject-parser
