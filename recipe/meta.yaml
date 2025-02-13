@@ -36,7 +36,7 @@ requirements:
     - packaging >=20.9
     - python >={{ python_min }}
     - shippinglabel >=1.0.0
-    - typing-extensions >=3.7.4.3
+    - typing-extensions !=4.7.0,>=3.7.4.3
   run_constrained:
     - sdjson >=0.3.1
 
