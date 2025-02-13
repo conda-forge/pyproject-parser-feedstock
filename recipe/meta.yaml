@@ -48,6 +48,7 @@ test:
     - pyproject-parser --help
     - check-pyproject --help
     - pyproject-fmt --help
+    - pyproject-info --help
   requires:
     - pip
     - python {{ python_min }}
