@@ -1,5 +1,5 @@
 {% set name = "pyproject-parser" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: ff1ddb5d426c6d8b38ad73cda2d5caf3f568852cb4e0cf869345c89e8ca0fb76
+  sha256: 4047bd9a25115e400199e672cd9d8f8ba405d8148d65a76cbf3afbcf77e966e2
 
 build:
   entry_points:
@@ -32,6 +32,7 @@ requirements:
     - consolekit >=1.4.1
     - dom-toml >=2.0.0
     - domdf-python-tools >=2.8.0
+    - license-expression >=30.0.0
     - natsort >=7.1.1
     - packaging >=20.9
     - python >={{ python_min }}
